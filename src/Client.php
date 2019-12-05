@@ -14,16 +14,16 @@ class Client
 {
 
 	/** @var string */
-	public static $sendMessageUrl = 'https://smsgateapi.sluzba.cz/apixml30/receiver';
+	public static $sendMessageUrl = 'https://smsgateapi.sms-sluzba.cz/apixml30/receiver';
 
 	/** @var string */
-	public static $deliveryMessageUrl = 'https://smsgateapi.sluzba.cz/apixml30/sender';
+	public static $deliveryMessageUrl = 'https://smsgateapi.sms-sluzba.cz/apixml30/sender';
 
 	/** @var string */
-	public static $confirmMessageUrl = 'https://smsgateapi.sluzba.cz/apixml30/confirm';
+	public static $confirmMessageUrl = 'https://smsgateapi.sms-sluzba.cz/apixml30/confirm';
 
 	/** @var string */
-	public static $infoUrl = 'https://smsgateapi.sluzba.cz/apixml30/info/credit';
+	public static $infoUrl = 'https://smsgateapi.sms-sluzba.cz/apixml30/info/credit';
 
 	/** @var ClientInterface */
 	private $guzzleClient;
