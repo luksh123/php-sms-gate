@@ -75,7 +75,7 @@ class Client
 			throw new ClientException('Request confirmation parameter may be only TRUE/FALSE or NULL.');
 		}
 
-		$response = $this->guzzleClient->post(self::$sendMessageUrl, array(
+		$response = $this->guzzleClient->request('POST', self::$sendMessageUrl, array(
 			'query' => array(
 				'login' => $this->login,
 				'password' => $this->password,
@@ -108,7 +108,7 @@ class Client
 	 */
 	public function getDeliveryReports()
 	{
-		$response = $this->guzzleClient->post(self::$deliveryMessageUrl, array(
+		$response = $this->guzzleClient->request('POST', self::$deliveryMessageUrl, array(
 			'query' => array(
 				'login' => $this->login,
 				'password' => $this->password,
@@ -142,7 +142,7 @@ class Client
 	 */
 	public function confirmDeliveryReport($id)
 	{
-		$response = $this->guzzleClient->get(self::$confirmMessageUrl, array(
+		$response = $this->guzzleClient->request('GET', self::$confirmMessageUrl, array(
 			'query' => array(
 				'login' => $this->login,
 				'password' => $this->password,
@@ -165,7 +165,7 @@ class Client
 	 */
 	public function getAccountStatus()
 	{
-		$response = $this->guzzleClient->get(self::$infoUrl, array(
+		$response = $this->guzzleClient->request('GET', self::$infoUrl, array(
 			'query' => array(
 				'login' => $this->login,
 				'password' => $this->password,
